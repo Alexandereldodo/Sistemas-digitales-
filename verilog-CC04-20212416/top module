@@ -1,0 +1,15 @@
+module top_module #(parameter integer K=3)
+input wire rst,
+input wire en,
+input wire clk,
+input wire [7:0] cmd,
+input wire [7:0] data,
+output wire [15:0] y,
+);
+
+reg [31:0] counter;
+reg [31:0] audio_counter;
+reg speaker;
+
+assign y = {13'b0, step, speaker};
+endmodule
